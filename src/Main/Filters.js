@@ -1,15 +1,21 @@
 import React from 'react';
 
-function Filters() {
+function Filters(props) {
 
-    
+    const handleFilter = ()=>{
+        var filter = document.getElementById("filter").value;
+        props.filterRestaurants(filter);
+    }
     return (
         <div>
-            <select>
-                <option value="0">Closest</option>
-                <option value="1">Furthest</option>
+            <select id="filter" onChange={handleFilter}>
+                <option value="">-- Select rating --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
-            <div id="slider"></div>
         </div>
     );
 }

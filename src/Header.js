@@ -9,15 +9,11 @@ function Header() {
             <div className="header-wrapper">
                 <div className="logo">
                     <Link  className="App-logo" to="/"><img src={logo} alt="logo" /></Link>
-                    <span className="header-separator"></span>
-                    <Link to="/AddRestaurant">
-                        <button className="add-restaurant">Add restaurant</button>
-                    </Link> 
                 </div>
                 <div className="nav">
                     <ul>
-                        <li className="welcome-message">Hello, Hazem</li>
-                        <li className="profile-picture"><div className="triangle-down"></div></li>
+                        <li className="welcome-message">Hello, Guest!</li>
+                        <li className="profile-picture"></li>
                     </ul>
                 </div>
             </div>

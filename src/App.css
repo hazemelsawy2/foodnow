@@ -106,8 +106,10 @@ html, body, #root{
   background-color: #f4f4f4;
   flex-grow: 1;
   max-width: 450px;
-  min-width: 440px;
+  min-width: 315px;
   padding: 30px;
+  height: 90vh;
+  overflow: scroll;
   border-right:1px solid #e0e0e0;
 }
 .main-separator{
@@ -116,23 +118,37 @@ html, body, #root{
   height: 1px;
   margin: 20px 0;
 }
-
+.main p.fr{
+  font-size: 12px;
+  color: #89849b;
+  margin-right: 10px;
+  line-height: 40px;
+}
 .restaurant{
   display: flex;
   background: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,0.15);
   margin-bottom: 20px;
 }
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
 .restaurant-hero{
-  min-width: 178px;
+  width: 45%;
+  overflow: hidden;
+  text-align: center;
 }
 .restaurant-hero img{
-  height: 100%;
+  vertical-align: middle;
+  max-height: 71px;
+  max-width: 71px;
 }
 .restaurant-details{
   text-align: left;
   padding: 17px;
-  width: 100%;
+  width: 55%;
 }
 .restaurant-details h3{
   font-size: 14px;
@@ -156,19 +172,10 @@ html, body, #root{
   padding: 0 22px;
   cursor: pointer;
   border-radius: 5px;
+  background: #fff;
 }
-.restaurant-map{
-  text-align: left;
-  margin-left:-12px; 
-  margin-top: -12px;
-  max-width: 250px;
-}
-.mapRestaurant img{
-  width: 110%;
-}
-.gm-style-iw-d{
-  overflow: visible !important;
-}
+
+
 .restaurant-map h3{
   font-size: 16px;
   color: #2C2C2C;
@@ -564,9 +571,7 @@ end marker animation
 .currentPage{
   text-decoration: underline;
 }
-.boxContainer{
 
-}
 .box{
   padding: 30px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.15);
@@ -635,8 +640,8 @@ end marker animation
   background-color: #fff;
   min-height: 500px;
   padding: 30px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.15);
-  
+  border: 1px solid #e0e0e0;
+  border-top: none;
 }
 .add-restaurant-map form label{
   display: block;
@@ -656,7 +661,7 @@ end marker animation
   margin-bottom: 3px;
 }
 .add-restaurant-map form input[type=text]{
-  width: 352px;
+  width: 260px;
   line-height: 42px;
   border-radius: 5px;
   border: 1px solid #a3a3a3;
@@ -679,7 +684,7 @@ end marker animation
   padding: 0 20px;
 }
 .add-restaurant-map textarea{
-  width: 352px;
+  width: 260px;
   border-radius: 5px;
   border: 1px solid #a3a3a3;
   padding: 15px;
@@ -688,10 +693,139 @@ end marker animation
   min-height: 150px;
   resize: none;
 }
+.add-restaurant-map button{
+  background-color: #fff;
+}
 .add-restaurant-map .xButton{
   border-radius: 1000px;
   border: 1px solid #E20000;
   padding: 5px 7px;
   line-height: 10px;
   color: #E20000;
+}
+
+#mobileAnimation{
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  line-height: 30px;
+  z-index: 9999;
+  float: right;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+.mainContainer{
+  transition: margin 300ms;
+}
+.mobileA{
+  margin-left: -350px;
+}
+
+select{
+  border: 1px solid #e0e0e0;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 0px;
+}
+
+.addReviewForm form{
+  text-align: center;
+  margin-top: -20px;
+}
+.addReviewForm form label{
+  margin-bottom: 10px;
+}
+.addReviewForm textarea{
+  width: 87%;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: block;
+  min-height: 150px;
+  resize: vertical;
+  font-size: 14px;
+}
+.addReviewForm form button{
+  margin-top: 20px;
+}
+.addReviewForm .react-rater{
+  font-size: 30px;
+}
+/* stars styling */
+
+.react-rater-star.is-active{
+  color: #FFC224 !important;
+}
+.react-rater-star.is-active-half:before{
+  color: #FFC224 !important;
+}
+#ratingRequired{color:red;}
+/* end stars styling */
+
+
+.ratingsCount{
+  margin-top: 20px;
+  font-size: 13px;
+  color: #a3a3a3;
+  margin-left: 2px;
+}
+
+
+#map{
+  height: 95vh;
+}
+#street-view{
+  margin-top: 20px;
+  height: 400px;
+  width: 100%;
+}
+
+#map2, #pano{
+  height: 500px;
+}
+
+.reviewerDetails .fl img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.reviewerDetails p{
+  font-weight: bold;
+  margin: 5px 0;
+}
+.reviewerDetails{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.title p{
+  margin-bottom: 5px;
+}
+.title .closed{
+  color: red;
+}
+.title .open{
+  color: green;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(204, 204, 204); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150); 
 }

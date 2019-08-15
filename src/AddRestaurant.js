@@ -1,5 +1,4 @@
 import React from 'react';
-import GBK from './img/restaurant.jpg';
 import {Link} from 'react-router-dom';
 
 function AddRestaurant() {

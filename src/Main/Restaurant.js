@@ -1,62 +1,35 @@
-import React from 'react';
-import GBK from './../img/restaurant.jpg';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css';
 
-const restaurants = [{
-    "restaurantName":"Bronco",
-    "address":"39 Rue des Petites Écuries, 75010 Paris",
-    "lat":51.610649967914554,
-    "long":-0.11879437730715381,
-    "ratings":[
-       {
-          "stars":4,
-          "comment":"Great! But not many veggie options."
-       },
-       {
-          "stars":5,
-          "comment":"My favorite restaurant!"
-       }
-    ]
- },
- {
-    "restaurantName":"Babalou",
-    "address":"4 Rue Lamarck, 75018 Paris",
-    "lat":51.600726785867785,
-    "long":-0.09427750040276806,
-    "ratings":[
-       {
-          "stars":5,
-          "comment":"Tiny pizzeria next to Sacre Coeur!"
-       },
-       {
-          "stars":3,
-          "comment":"Meh, it was fine."
-       }
-    ]
- }];
+function Restaurant(props) {
+    const [restaurants] = useState(props.restaurantsArray);
+    const [filteredState, setFilteredState] = useState(props.filteredState);
 
-function Restaurant() {
     return (
         <div>
-            {restaurants.map((r) => (
+            {filteredState.length === 0 && (
+                <div>No restaurants have been found!</div>
+            )}
+            {filteredState.map((r) => (
+                <Link  key={r.place_id} to={'/RestaurantPage/' + r.place_id}>
                 <div className="restaurant">
                     <div className="restaurant-hero">
-                        <img src={GBK} alt="GBK" />
+                        <span className="helper"></span>
+                        <img src="https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png" alt="GBK" />
                     </div>
                     <div className="restaurant-details">
-                        <Link to="/RestaurantPage"><h3>{r.restaurantName}</h3></Link>
-                        <p className="restaurant-category">{r.address}</p>
-                        <p className="restaurant-status">9am - 10pm</p>
-                        <p className="restaurant-price">$$$</p>
-                        <div className="restaurant-rating">
-                            ratings here
-                        </div>
-                        <Link to="/RestaurantPage"><button className="fr review-button">Review</button></Link>
+                        <h3>{r.name}</h3>
+                        <p className="restaurant-category">{r.vicinity}</p>
+                        <Rater total={5} rating={r.rating} interactive={false} /><span className="ratingsCount">({r.user_ratings_total})</span>
+                        <p className="restaurant-ratings"></p>
+                        <button className="review-button">Review</button>
                     </div>
                 </div>
+                </Link>
             ))}
         </div>
-        
     );
 }
 
