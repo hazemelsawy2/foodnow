@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/foodnow/static/css/main.33578027.chunk.css",
+    "main.css": "/foodnow/static/css/main.214da646.chunk.css",
     "main.js": "/foodnow/static/js/main.5e437c47.chunk.js",
     "main.js.map": "/foodnow/static/js/main.5e437c47.chunk.js.map",
     "runtime~main.js": "/foodnow/static/js/runtime~main.42b81072.js",
@@ -9,10 +9,10 @@
     "static/js/2.8a71446e.chunk.js": "/foodnow/static/js/2.8a71446e.chunk.js",
     "static/js/2.8a71446e.chunk.js.map": "/foodnow/static/js/2.8a71446e.chunk.js.map",
     "index.html": "/foodnow/index.html",
-    "precache-manifest.37babadd8f78c4699e1ac31dd8873f50.js": "/foodnow/precache-manifest.37babadd8f78c4699e1ac31dd8873f50.js",
+    "precache-manifest.8d6c01b2606eace568e99a95f9107cf9.js": "/foodnow/precache-manifest.8d6c01b2606eace568e99a95f9107cf9.js",
     "service-worker.js": "/foodnow/service-worker.js",
     "static/css/2.a00eef2d.chunk.css.map": "/foodnow/static/css/2.a00eef2d.chunk.css.map",
-    "static/css/main.33578027.chunk.css.map": "/foodnow/static/css/main.33578027.chunk.css.map",
+    "static/css/main.214da646.chunk.css.map": "/foodnow/static/css/main.214da646.chunk.css.map",
     "static/media/go.svg": "/foodnow/static/media/go.8b16bade.svg"
   }
 }
