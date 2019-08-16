@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a47278f2af88cc41f794438623391022",
+    "revision": "161ff48df9ec96d94bbc06de075760a0",
     "url": "/foodnow/index.html"
   },
   {
-    "revision": "c33f281d6d413b44579f",
+    "revision": "14d8fc7320855d3b8812",
     "url": "/foodnow/static/css/2.a00eef2d.chunk.css"
   },
   {
-    "revision": "08ddd5f08089bd628cbe",
+    "revision": "26fb39649a1c6920f700",
     "url": "/foodnow/static/css/main.05199f28.chunk.css"
   },
   {
-    "revision": "c33f281d6d413b44579f",
-    "url": "/foodnow/static/js/2.01b079f8.chunk.js"
+    "revision": "14d8fc7320855d3b8812",
+    "url": "/foodnow/static/js/2.ee8e9ce1.chunk.js"
   },
   {
-    "revision": "08ddd5f08089bd628cbe",
-    "url": "/foodnow/static/js/main.944bd248.chunk.js"
+    "revision": "26fb39649a1c6920f700",
+    "url": "/foodnow/static/js/main.1f79cd11.chunk.js"
   },
   {
     "revision": "e79810581ad93208168d",
