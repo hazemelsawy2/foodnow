@@ -17,15 +17,25 @@ function Map(props) {
         });
 
         setMap(map);
-        navigator.geolocation.getCurrentPosition(position => {
+        var options = {
+            enableHighAccuracy: false,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function error(err) {
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+        }
+        const success = position => {
+            console.log(position);
             const mapCenter = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            
+
             map.setCenter(mapCenter);
-            if(mapCenter){
-                document.querySelector('.loader').style.display="none";
+            if (mapCenter) {
+                document.querySelector('.loader').style.display = "none";
             }
             marker(mapCenter, map, "https://sheengroup.com.au/assets/Uploads/misc/current-location.png");
             var service = new window.google.maps.places.PlacesService(map);
@@ -63,11 +73,14 @@ function Map(props) {
                         bindInfoWindow(marker[i], map, infowindow, content);
                         marker[i].setMap(map);
                     }
-                    
+
                 }
                 props.updateMarkers(marker);
             });
-        });
+        }
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+
 
         map.addListener('click', function (e) {
             if (infoWindow) { infoWindow.close(); }
@@ -75,7 +88,7 @@ function Map(props) {
         });
     }, []);
 
-    
+
 
     const bindInfoWindow = (marker, map, infowindow, html) => {
         marker.addListener('click', function () {
