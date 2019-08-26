@@ -11,7 +11,6 @@ function Map(props) {
 
 
     useEffect(() => {
-
         const map = new window.google.maps.Map(document.getElementById('map'), {
             center: { lat: 51.60678645581746, lng: -0.006617395123285 },
             zoom: 15
@@ -23,7 +22,11 @@ function Map(props) {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+            
             map.setCenter(mapCenter);
+            if(mapCenter){
+                document.querySelector('.loader').style.display="none";
+            }
             marker(mapCenter, map, "https://sheengroup.com.au/assets/Uploads/misc/current-location.png");
             var service = new window.google.maps.places.PlacesService(map);
             service.nearbySearch({
@@ -34,12 +37,17 @@ function Map(props) {
                 props.updateMain(results, map);
                 setRestaurants(results);
                 setFilteredState(results);
+                let marker = [];
                 if (status === window.google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         var place = results[i];
-                        let content = '<h3>' + place.name + '</h3><h4>' + place.vicinity + '</h4>Rating: '
-                            + place.rating;
-                        var marker = new window.google.maps.Marker({
+                        let content = '<h3>' + place.name + '</h3><h4>' + place.vicinity + '</h4>Rating: ';
+                        if (place.rating > 0) {
+                            content += place.rating;
+                        } else {
+                            content += "No ratings found!";
+                        }
+                        marker[i] = new window.google.maps.Marker({
                             position: place.geometry.location,
                             animation: window.google.maps.Animation.DROP,
                             map: map,
@@ -52,10 +60,12 @@ function Map(props) {
                         var infowindow = new window.google.maps.InfoWindow({
                             content: content
                         });
-                        bindInfoWindow(marker, map, infowindow, content);
-                        marker.setMap(map);
+                        bindInfoWindow(marker[i], map, infowindow, content);
+                        marker[i].setMap(map);
                     }
+                    
                 }
+                props.updateMarkers(marker);
             });
         });
 
@@ -64,6 +74,8 @@ function Map(props) {
             setNewRestaurant(e);
         });
     }, []);
+
+    
 
     const bindInfoWindow = (marker, map, infowindow, html) => {
         marker.addListener('click', function () {
@@ -75,8 +87,12 @@ function Map(props) {
     }
 
     const addNewRestaurant = rJSON => {
-        let content = '<h3>' + rJSON.name + '</h3><h4>' + rJSON.vicinity + '</h4>Rating: '
-            + rJSON.rating;
+        let content = '<h3>' + rJSON.name + '</h3><h4>' + rJSON.vicinity + '</h4>Rating: ';
+        if (rJSON.rating > 0) {
+            content += rJSON.rating;
+        } else {
+            content += "No ratings found!";
+        }
         var marker = new window.google.maps.Marker({
             position: rJSON.geometry.location,
             animation: window.google.maps.Animation.DROP,

@@ -144,6 +144,7 @@ html, body, #root{
   vertical-align: middle;
   max-height: 71px;
   max-width: 71px;
+  opacity: 0.1;
 }
 .restaurant-details{
   text-align: left;
@@ -201,9 +202,10 @@ html, body, #root{
   padding: 0 14px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 0 0 12px 10px;
+  margin: 10px 0 0 0;
   vertical-align: middle;
   display: inline-block;
+  font-size: 12px;
 }
 .gm-style .gm-style-iw-c{
   border-radius: 0 !important;
@@ -783,6 +785,7 @@ select{
 
 #map2, #pano{
   height: 500px;
+  margin-top: 20px;
 }
 
 .reviewerDetails .fl img{
@@ -798,7 +801,9 @@ select{
   overflow: hidden;
   margin-bottom: 10px;
 }
-
+.marp{
+  border: none !important;
+}
 .title p{
   margin-bottom: 5px;
 }
@@ -807,8 +812,15 @@ select{
 }
 .title .open{
   color: green;
+  margin: 5px 0;
 }
 
+.open{
+  color:green !important;
+}
+.closed{
+  color: red !important;
+}
 
 /* scroll bar */
 ::-webkit-scrollbar {
@@ -828,4 +840,67 @@ select{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(150, 150, 150); 
+}
+
+
+.noReviews{
+  margin-top: 20px;
+}
+
+
+
+
+/* Loader */ 
+.loader{
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+}
+.loader > div{
+  width: 100%;
+  text-align: center;
+  height: 200px;
+	position:absolute;
+  left:0; right:0;
+  top:0; bottom:0;
+	margin:auto;
+	max-width:100%;
+	max-height:100%;
+	overflow:auto;
+}
+.loader > div h3{
+  font-weight: lighter;
+  color:#a3a3a3;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position:absolute;
+  left:0; right:0;
+  top:0; bottom:0;
+	margin:auto;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #a3a3a3;
+  border-color: #a3a3a3 transparent #a3a3a3 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -12,6 +12,8 @@ function App() {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [map, setMap] = useState(null);
   const [filteredState, setFilteredState] = useState([]);
+  const [markers, setMarkers] = useState([]);
+
   const updateMain = (e, map) => {
     setAllRestaurants(e);
     setFilteredState(e);
@@ -21,10 +23,18 @@ function App() {
     setFilteredState(e);
     console.log(filteredState);
   }
-
+  const updateMarkers = (e) => {
+    setMarkers(e);
+  }
 
   return (
     <div className="App">
+    <div className="loader">
+      <div>
+        <h3>Please allow location access to fetch restaurants around you!</h3>
+        <div className="lds-dual-ring"></div>
+      </div>
+    </div>
       <Router>
         <Header />
         <div className="mainContainer">
@@ -42,14 +52,16 @@ function App() {
                 updateMain={updateMain} 
                 filteredState={filteredState}
                 restaurantsArray={allRestaurants} 
+                markers={markers}
                 isAuthed={true} />} 
               />
           </Switch>
-          <div style={{ width: '100vw' }}>
+          <div className="mapContainer" style={{ width: '100vw' }}>
             <Map
               filteredState={filteredState}
               reastaurantsArray={allRestaurants}
               updateMain={updateMain}
+              updateMarkers={updateMarkers}
             />
           </div>
         </div>
@@ -57,9 +69,5 @@ function App() {
     </div>
   );
 }
-
-
-//const WrappedMap = withScriptjs(withGoogleMap(Map));
-
 
 export default App;

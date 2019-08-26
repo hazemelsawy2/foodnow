@@ -23,7 +23,6 @@ function Main(props) {
             <Filters filterRestaurants={filterRestaurants} restaurants={restaurants} />
             <div className="main-separator"></div>
             <Restaurant filteredState={filteredState} restaurantsArray={restaurants} />
-
         </div>
     );
 }

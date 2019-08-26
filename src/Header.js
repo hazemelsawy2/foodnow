@@ -8,7 +8,7 @@ function Header() {
         <header className="App-header">
             <div className="header-wrapper">
                 <div className="logo">
-                    <Link  className="App-logo" to="/"><img src={logo} alt="logo" /></Link>
+                    <Link className="App-logo" to="/"><img src={logo} alt="logo" /></Link>
                 </div>
                 <div className="nav">
                     <ul>
