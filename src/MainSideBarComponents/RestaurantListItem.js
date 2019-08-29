@@ -4,8 +4,7 @@ import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css';
 import foodnow from './../img/foodnow.png'
 function Restaurant(props) {
-    const [restaurants] = useState(props.restaurantsArray);
-    const [filteredState, setFilteredState] = useState(props.filteredState);
+    const [filteredState] = useState(props.filteredState);
 
     return (
         <div>

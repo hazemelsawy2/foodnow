@@ -1,21 +1,39 @@
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
 }
-button:focus {outline:0; }
-.fl{
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button:focus {
+  outline: 0;
+}
+.fl {
   float: left;
 }
-.fr{
+.fr {
   float: right;
 }
-.cb{
+.cb {
   clear: both;
 }
 
-html, body, #root{
+html,
+body,
+#root {
   height: 100%;
 }
 .App {
@@ -25,55 +43,54 @@ html, body, #root{
 }
 
 .App-logo {
-  margin-top:11px;
-
+  margin-top: 11px;
 }
 /* header */
 .App-header {
   height: 80px;
-  box-shadow: 0 4px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
   color: #575757;
   z-index: 9999;
 }
-.header-wrapper{
+.header-wrapper {
   margin: 0 auto;
   padding: 0 20px;
 }
-.logo{
+.logo {
   float: left;
 }
-.logo *,.nav ul li{
+.logo *,
+.nav ul li {
   float: left;
 }
-.header-separator{
+.header-separator {
   display: inline-block;
   width: 1px;
   height: 50px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   margin: 15px 25px;
 }
-.add-restaurant{
+.add-restaurant {
   width: 110px;
   height: 38px;
-  border:1px solid #575757;
+  border: 1px solid #575757;
   border-radius: 5px;
-  font-size:12px;
+  font-size: 12px;
   padding: 10px;
-  margin-top:21px;
+  margin-top: 21px;
   cursor: pointer;
 }
 
-
-.nav{
+.nav {
   float: right;
 }
-.nav ul li{
+.nav ul li {
   font-size: 12px;
   margin-right: 13px;
   line-height: 80px;
   vertical-align: middle;
 }
-.profile-picture{
+.profile-picture {
   width: 35px;
   height: 35px;
   border-radius: 1000px;
@@ -82,10 +99,10 @@ html, body, #root{
   position: relative;
 }
 .triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
   border-top: 8px solid #555;
   position: absolute;
   right: -13px;
@@ -95,14 +112,14 @@ html, body, #root{
 .App-link {
   color: #61dafb;
 }
-.mainContainer{
+.mainContainer {
   display: flex;
 }
-.map{
+.map {
   height: 100%;
 }
 
-.main{
+.main {
   background-color: #f4f4f4;
   flex-grow: 1;
   max-width: 450px;
@@ -110,24 +127,28 @@ html, body, #root{
   padding: 30px;
   height: 90vh;
   overflow: scroll;
-  border-right:1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
 }
-.main-separator{
+.main-separator {
   width: 100%;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   height: 1px;
   margin: 20px 0;
 }
-.main p.fr{
+.main p.fr {
   font-size: 12px;
   color: #89849b;
   margin-right: 10px;
   line-height: 40px;
 }
-.restaurant{
+.main p.filter {
+  font-size: 12px;
+  color: #89849b;
+}
+.restaurant {
   display: flex;
   background: #fff;
-  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
 }
 .helper {
@@ -135,39 +156,39 @@ html, body, #root{
   height: 100%;
   vertical-align: middle;
 }
-.restaurant-hero{
+.restaurant-hero {
   width: 45%;
   overflow: hidden;
   text-align: center;
 }
-.restaurant-hero img{
+.restaurant-hero img {
   vertical-align: middle;
   max-height: 71px;
   max-width: 71px;
   opacity: 0.1;
 }
-.restaurant-details{
+.restaurant-details {
   text-align: left;
   padding: 17px;
   width: 55%;
 }
-.restaurant-details h3{
+.restaurant-details h3 {
   font-size: 14px;
-  color: #2C2C2C;
+  color: #2c2c2c;
   margin-bottom: 9px;
 }
-.restaurant-details p{
-  color: #A3A3A3;
+.restaurant-details p {
+  color: #a3a3a3;
   font-size: 10px;
   margin-bottom: 6px;
 }
-.restaurant-category{
+.restaurant-category {
   font-size: 12px !important;
   margin-bottom: 6px;
 }
-.review-button{
-  color: #E20000;
-  border:1px solid #E20000;
+.review-button {
+  color: #e20000;
+  border: 1px solid #e20000;
   line-height: 23px;
   vertical-align: middle;
   padding: 0 22px;
@@ -176,27 +197,26 @@ html, body, #root{
   background: #fff;
 }
 
-
-.restaurant-map h3{
+.restaurant-map h3 {
   font-size: 16px;
-  color: #2C2C2C;
+  color: #2c2c2c;
   margin: 5px 0;
   padding: 0 10px;
 }
-.restaurant-map p{
+.restaurant-map p {
   font-size: 12px;
   margin-bottom: 6px;
   padding: 0 10px;
 }
-.restaurant-category{
+.restaurant-category {
   color: rgb(118, 118, 118);
 }
-.restaurant-status{
-  color: #17B526;
+.restaurant-status {
+  color: #17b526;
 }
-.go{
-  color: #00A3D7;
-  border:1px solid #00A3D7;
+.go {
+  color: #00a3d7;
+  border: 1px solid #00a3d7;
   line-height: 23px;
   vertical-align: middle;
   padding: 0 14px;
@@ -207,11 +227,10 @@ html, body, #root{
   display: inline-block;
   font-size: 12px;
 }
-.gm-style .gm-style-iw-c{
+.gm-style .gm-style-iw-c {
   border-radius: 0 !important;
 }
-.go img{
-
+.go img {
   display: inline-block;
   vertical-align: middle;
 }
@@ -248,7 +267,7 @@ html, body, #root{
   animation-duration: 1s;
 }
 .pin:after {
-  content: '';
+  content: "";
   width: 14px;
   height: 14px;
   margin: 8px 0 0 8px;
@@ -257,7 +276,7 @@ html, body, #root{
   border-radius: 50%;
 }
 .pulse {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   height: 14px;
   width: 14px;
@@ -559,60 +578,60 @@ end marker animation
 * 
 *
 */
-.breadCrumbs{
+.breadCrumbs {
   font-size: 14px;
-  color: #A3A3A3;
+  color: #a3a3a3;
   margin-bottom: 23px;
 }
-.breadCrumbs a{
-  color: #A3A3A3;
+.breadCrumbs a {
+  color: #a3a3a3;
 }
-.breadCrumbs a:hover{
+.breadCrumbs a:hover {
   color: #747474;
 }
-.currentPage{
+.currentPage {
   text-decoration: underline;
 }
 
-.box{
+.box {
   padding: 30px;
-  box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   margin-bottom: 25px;
 }
-.box h1{
+.box h1 {
   font-size: 24px;
   color: #2c2c2c;
   margin-bottom: 12px;
 }
-.box p{
+.box p {
   color: #a3a3a3;
   font-size: 14px;
 }
-.form{
+.form {
   text-align: left;
 }
-.form label{
+.form label {
   display: block;
   margin-top: 20px;
   font-size: 12px;
   color: #a3a3a3;
   margin-bottom: 3px;
 }
-.form input[type=text]{
+.form input[type="text"] {
   width: 352px;
   line-height: 42px;
   border-radius: 5px;
   border: 1px solid #a3a3a3;
   padding: 0 15px;
 }
-.form input[disabled]{
+.form input[disabled] {
   background-color: rgb(239, 239, 239);
 }
-.addButton{
+.addButton {
   font-size: 16px;
-  color: #E20000;
-  border: 1px solid #E20000;
+  color: #e20000;
+  border: 1px solid #e20000;
   line-height: 33px;
   width: 110px;
   display: block;
@@ -621,21 +640,20 @@ end marker animation
   cursor: pointer;
 }
 
-
 /* restaurant page */
-.review{
-  background-color: #F4F4F4;
+.review {
+  background-color: #f4f4f4;
   border-radius: 5px;
   margin: 20px 0;
   padding: 20px;
 }
-.review p{
-  color: #2C2C2C;
+.review p {
+  color: #2c2c2c;
   font-size: 14px;
 }
 
 /* add restaurant pop up */
-.add-restaurant-map{
+.add-restaurant-map {
   position: absolute;
   top: 80px;
   right: 10px;
@@ -645,24 +663,24 @@ end marker animation
   border: 1px solid #e0e0e0;
   border-top: none;
 }
-.add-restaurant-map form label{
+.add-restaurant-map form label {
   display: block;
 }
-.add-restaurant-map p{
+.add-restaurant-map p {
   color: #a3a3a3;
   font-size: 14px;
 }
-.add-restaurant-map form{
+.add-restaurant-map form {
   text-align: left;
 }
-.add-restaurant-map form label{
+.add-restaurant-map form label {
   display: block;
   margin-top: 20px;
   font-size: 12px;
   color: #a3a3a3;
   margin-bottom: 3px;
 }
-.add-restaurant-map form input[type=text]{
+.add-restaurant-map form input[type="text"] {
   width: 260px;
   line-height: 42px;
   border-radius: 5px;
@@ -671,13 +689,13 @@ end marker animation
   margin-bottom: 5px;
   display: block;
 }
-.form input[disabled]{
+.form input[disabled] {
   background-color: rgb(239, 239, 239);
 }
-.add-restaurant-map form button{
+.add-restaurant-map form button {
   font-size: 16px;
-  color: #E20000;
-  border: 1px solid #E20000;
+  color: #e20000;
+  border: 1px solid #e20000;
   line-height: 33px;
   display: block;
   margin: 40px auto 0;
@@ -685,7 +703,7 @@ end marker animation
   cursor: pointer;
   padding: 0 20px;
 }
-.add-restaurant-map textarea{
+.add-restaurant-map textarea {
   width: 260px;
   border-radius: 5px;
   border: 1px solid #a3a3a3;
@@ -695,18 +713,18 @@ end marker animation
   min-height: 150px;
   resize: none;
 }
-.add-restaurant-map button{
+.add-restaurant-map button {
   background-color: #fff;
 }
-.add-restaurant-map .xButton{
+.add-restaurant-map .xButton {
   border-radius: 1000px;
-  border: 1px solid #E20000;
+  border: 1px solid #e20000;
   padding: 5px 7px;
   line-height: 10px;
-  color: #E20000;
+  color: #e20000;
 }
 
-#mobileAnimation{
+#mobileAnimation {
   width: 50px;
   height: 40px;
   display: inline-block;
@@ -716,28 +734,28 @@ end marker animation
   border: 1px solid #e0e0e0;
   background-color: #fff;
 }
-.mainContainer{
+.mainContainer {
   transition: margin 300ms;
 }
-.mobileA{
+.mobileA {
   margin-left: -350px;
 }
 
-select{
+select {
   border: 1px solid #e0e0e0;
   line-height: 40px;
   height: 40px;
   border-radius: 0px;
 }
 
-.addReviewForm form{
+.addReviewForm form {
   text-align: center;
   margin-top: -20px;
 }
-.addReviewForm form label{
+.addReviewForm form label {
   margin-bottom: 10px;
 }
-.addReviewForm textarea{
+.addReviewForm textarea {
   width: 87%;
   border-radius: 5px;
   border: 1px solid #a3a3a3;
@@ -748,77 +766,78 @@ select{
   resize: vertical;
   font-size: 14px;
 }
-.addReviewForm form button{
+.addReviewForm form button {
   margin-top: 20px;
 }
-.addReviewForm .react-rater{
+.addReviewForm .react-rater {
   font-size: 30px;
 }
 /* stars styling */
 
-.react-rater-star.is-active{
-  color: #FFC224 !important;
+.react-rater-star.is-active {
+  color: #ffc224 !important;
 }
-.react-rater-star.is-active-half:before{
-  color: #FFC224 !important;
+.react-rater-star.is-active-half:before {
+  color: #ffc224 !important;
 }
-#ratingRequired{color:red;}
+#ratingRequired {
+  color: red;
+}
 /* end stars styling */
 
-
-.ratingsCount{
+.ratingsCount {
   margin-top: 20px;
   font-size: 13px;
   color: #a3a3a3;
   margin-left: 2px;
 }
 
-
-#map{
+#map {
   height: 95vh;
 }
-#street-view{
+#street-view {
   margin-top: 20px;
   height: 400px;
   width: 100%;
 }
 
-#map2, #pano{
+#map2,
+#pano {
   height: 500px;
   margin-top: 20px;
 }
 
-.reviewerDetails .fl img{
+.reviewerDetails .fl img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
-.reviewerDetails p{
+.reviewerDetails p {
   font-weight: bold;
   margin: 5px 0;
 }
-.reviewerDetails{
+.reviewerDetails {
   overflow: hidden;
   margin-bottom: 10px;
 }
-.marp{
+.marp {
   border: none !important;
 }
-.title p{
+.title p {
   margin-bottom: 5px;
 }
-.title .closed{
+.title .closed {
   color: red;
 }
-.title .open{
+.title .open {
   color: green;
   margin: 5px 0;
 }
 
-.open{
-  color:green !important;
+.open {
+  color: green !important;
 }
-.closed{
+.closed {
   color: red !important;
 }
 
@@ -829,60 +848,60 @@ select{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(204, 204, 204); 
+  background: rgb(204, 204, 204);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(150, 150, 150); 
+  background: rgb(150, 150, 150);
 }
 
-
-.noReviews{
+.noReviews {
   margin-top: 20px;
 }
 
-
-
-
-/* Loader */ 
-.loader{
+/* Loader */
+.loader {
   background: #fff;
   position: fixed;
   height: 100vh;
   width: 100vw;
   z-index: 99999;
 }
-.loader > div{
+.loader > div {
   width: 100%;
   text-align: center;
   height: 200px;
-	position:absolute;
-  left:0; right:0;
-  top:0; bottom:0;
-	margin:auto;
-	max-width:100%;
-	max-height:100%;
-	overflow:auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
 }
-.loader > div h3{
+.loader > div h3 {
   font-weight: lighter;
-  color:#a3a3a3;
+  color: #a3a3a3;
 }
 
 .lds-dual-ring {
   display: inline-block;
   width: 64px;
   height: 64px;
-  position:absolute;
-  left:0; right:0;
-  top:0; bottom:0;
-	margin:auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .lds-dual-ring:after {
