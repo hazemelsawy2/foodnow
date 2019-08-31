@@ -12,7 +12,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.clearfix {
+  width: 45%;
+  margin-top: 10px;
+}
+.noUi-connect {
+  background: #ffc224 !important;
+  opacity: 0.9;
+}
+.noUi-tooltip {
+  font-size: 12px;
+  color: #89849b !important;
+  bottom: 107% !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

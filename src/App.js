@@ -11,8 +11,8 @@ function App() {
   const [map, setMap] = useState(null);
   const [filteredState, setFilteredState] = useState([]);
   const [markers, setMarkers] = useState([]);
-  const [stars, setStars] = useState(0);
-
+  const [starStart, setStarStart] = useState(0);
+  const [starEnd, setStarEnd] = useState(5);
   const updateMain = (e, map) => {
     setAllRestaurants(e);
     setFilteredState(e);
@@ -24,8 +24,9 @@ function App() {
   const updateMarkers = e => {
     setMarkers(e);
   };
-  const updateStars = e => {
-    setStars(e);
+  const updateStars = (s, e) => {
+    setStarStart(s);
+    setStarEnd(e);
   };
 
   return (
@@ -49,7 +50,8 @@ function App() {
                   restaurantsArray={allRestaurants}
                   updateFiltered={updateFiltered}
                   updateStars={updateStars}
-                  stars={stars}
+                  starStart={starStart}
+                  starEnd={starEnd}
                 />
               )}
             />

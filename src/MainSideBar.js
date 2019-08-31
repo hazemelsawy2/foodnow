@@ -5,13 +5,18 @@ import Restaurant from "./MainSideBarComponents/RestaurantListItem";
 function Main(props) {
   const [restaurants] = useState(props.restaurantsArray);
   const [filteredState] = useState(props.filteredState);
-  const [stars] = useState(props.stars);
-  const filterRestaurants = value => {
-    const filtered = restaurants.filter(function(value2) {
-      return value2.rating >= value;
+  const [starStart] = useState(props.starStart);
+  const [starEnd] = useState(props.starEnd);
+  const filterRestaurants = (valueStart, valueEnd) => {
+    const filtered = restaurants.filter(function(value) {
+      if (value.rating) {
+        return value.rating >= valueStart && value.rating <= valueEnd;
+      } else {
+        return 0 >= valueStart && 0 <= valueEnd;
+      }
     });
     props.updateFiltered(filtered);
-    props.updateStars(value);
+    props.updateStars(valueStart, valueEnd);
   };
 
   return (
@@ -29,7 +34,8 @@ function Main(props) {
         filteredState={filteredState}
         filterRestaurants={filterRestaurants}
         restaurants={restaurants}
-        stars={stars}
+        starStart={starStart}
+        starEnd={starEnd}
       />
       <div className="main-separator"></div>
       <Restaurant

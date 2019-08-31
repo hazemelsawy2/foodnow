@@ -1,27 +1,26 @@
 import React, { useState } from "react";
+import Nouislider from "nouislider-react";
+import "nouislider/distribute/nouislider.css";
 
 function Filters(props) {
-  const [stars] = useState(props.stars);
-  const handleFilter = () => {
-    var filter = document.getElementById("filter").value;
-    props.filterRestaurants(parseInt(filter));
+  const [starStart] = useState(props.starStart);
+  const [starEnd] = useState(props.starEnd);
+  const onUpdate = (render, handle, value, un, percent) => {
+    const valueStart = value[0];
+    const valueEnd = value[1];
+    props.filterRestaurants(valueStart, valueEnd);
   };
+
   return (
-    <div>
-      <p className="filter">
-        {props.stars !== 5 ? `${props.stars} or more star(s) rating` : `${props.stars} stars rating`}
-      </p>
-      <form action="">
-        <input
-          type="range"
-          id="filter"
-          value={stars}
-          onChange={handleFilter}
-          name="points"
-          min="0"
-          max="5"
-        ></input>
-      </form>
+    <div className="clearfix">
+      <Nouislider
+        range={{ min: 0, max: 5 }}
+        start={[starStart, starEnd]}
+        tooltips={true}
+        step={1}
+        onChange={onUpdate}
+        connect
+      />
     </div>
   );
 }

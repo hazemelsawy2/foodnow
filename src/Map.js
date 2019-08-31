@@ -89,7 +89,15 @@ function Map(props) {
   };
 
   const error = err => {
-    console.error(err);
+    const message = document.querySelector(".loader div h3");
+    const loaderAnimation = document.querySelector(".lds-dual-ring");
+    message.innerHTML =
+      "<span style='color:#00a3d7'>Oops!</span>" +
+      "<br />" +
+      "<br />" +
+      "Couldn't get your location, please allow location access or refresh the page!";
+    message.style.color = "orange";
+    loaderAnimation.style.display = "none";
   };
   success = position => {
     const mapCenter = {
