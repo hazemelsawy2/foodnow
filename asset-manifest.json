@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/foodnow/static/css/main.579e70b6.chunk.css",
-    "main.js": "/foodnow/static/js/main.b46b062f.chunk.js",
-    "main.js.map": "/foodnow/static/js/main.b46b062f.chunk.js.map",
+    "main.css": "/foodnow/static/css/main.c08c536d.chunk.css",
+    "main.js": "/foodnow/static/js/main.ac97736e.chunk.js",
+    "main.js.map": "/foodnow/static/js/main.ac97736e.chunk.js.map",
     "runtime~main.js": "/foodnow/static/js/runtime~main.42b81072.js",
     "runtime~main.js.map": "/foodnow/static/js/runtime~main.42b81072.js.map",
     "static/css/2.4931087a.chunk.css": "/foodnow/static/css/2.4931087a.chunk.css",
     "static/js/2.40bd3238.chunk.js": "/foodnow/static/js/2.40bd3238.chunk.js",
     "static/js/2.40bd3238.chunk.js.map": "/foodnow/static/js/2.40bd3238.chunk.js.map",
     "index.html": "/foodnow/index.html",
-    "precache-manifest.2974c68b4d02f58573ce212b5f15a851.js": "/foodnow/precache-manifest.2974c68b4d02f58573ce212b5f15a851.js",
+    "precache-manifest.33df363ea4b65d896902c01f89839450.js": "/foodnow/precache-manifest.33df363ea4b65d896902c01f89839450.js",
     "service-worker.js": "/foodnow/service-worker.js",
     "static/css/2.4931087a.chunk.css.map": "/foodnow/static/css/2.4931087a.chunk.css.map",
-    "static/css/main.579e70b6.chunk.css.map": "/foodnow/static/css/main.579e70b6.chunk.css.map",
+    "static/css/main.c08c536d.chunk.css.map": "/foodnow/static/css/main.c08c536d.chunk.css.map",
     "static/media/foodnow.png": "/foodnow/static/media/foodnow.928cf20a.png",
     "static/media/go.svg": "/foodnow/static/media/go.8b16bade.svg"
   }
