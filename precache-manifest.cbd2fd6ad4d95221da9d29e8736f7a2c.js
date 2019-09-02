@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "818e40fe610ac8366b00317ff2660293",
+    "revision": "1f472aad8724b0b6dbb0c247422f3d87",
     "url": "/foodnow/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodnow/static/css/2.4931087a.chunk.css"
   },
   {
-    "revision": "965fe15fe019d233bf4c",
+    "revision": "4a51f46c071797c0e7a3",
     "url": "/foodnow/static/css/main.c08c536d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodnow/static/js/2.40bd3238.chunk.js"
   },
   {
-    "revision": "965fe15fe019d233bf4c",
-    "url": "/foodnow/static/js/main.ac97736e.chunk.js"
+    "revision": "4a51f46c071797c0e7a3",
+    "url": "/foodnow/static/js/main.b46b062f.chunk.js"
   },
   {
     "revision": "e79810581ad93208168d",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/foodnow/precache-manifest.33df363ea4b65d896902c01f89839450.js"
+  "/foodnow/precache-manifest.cbd2fd6ad4d95221da9d29e8736f7a2c.js"
 );
 
 self.addEventListener('message', (event) => {
